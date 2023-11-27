@@ -91,10 +91,57 @@ fileNames.forEach((fileName) => {
     console.error(`Error reading or parsing ${fileName}:`, readError);
   }
 });
+const getDetailData = (feedId) => {
+  return footballDetailData;
+}
+const getEventData = (feedId) => {
+  return footballEventData;
+}
+const getCCode = (feedId, feedEvent) => {
+  return getEventData(feedId)?.d?.m[feedEvent]?.c;
+};
+function getValueByPath(data, path) {
+  const keys = path.split(".");
+  let value = data;
 
+  for (const key of keys) {
+    if (value.hasOwnProperty(key)) {
+      value = value[key];
+    } else {
+      return undefined;
+    }
+  }
+  return value;
+}
 setTimeout(() => {
   console.log("wagerData:", wagerData);
-  console.log("marketRulesData:", marketRulesData);
-  console.log("footballEventData:", footballEventData);
-  console.log("footballDetailData:", footballDetailData);
+  // console.log("marketRulesData:", marketRulesData);
+  // console.log("footballEventData:", footballEventData);
+  // console.log("footballDetailData:", footballDetailData);
+  wagerData.map((row) => {
+    let feedData = "" + row.feedData;
+    const [feedId, feedEvent, feedSelection] = feedData.split("-");
+    const detailData = getDetailData(feedId);
+    const eventData = getEventData(feedId);
+    const market_rules = marketRulesData;
+    const cCode = getCCode(feedId, feedEvent);
+    const homeName = eventData?.d?.c1?.n.toUpperCase();
+    const awayName = eventData?.d?.c2?.n.toUpperCase();
+    const pCode = market_rules[row.sport]?.[cCode]?.FULL?.p ?? "";
+    const path = market_rules[row.sport]?.[cCode]?.FULL?.path ?? "";
+    const c1 = getValueByPath(eventData?.d, path)?.c1;
+    const c2 = getValueByPath(eventData?.d, path)?.c2;
+    const a = eventData?.d?.m[feedEvent]?.o?.[feedSelection]?.a?.[0];
+    const p = eventData?.d?.p;
+    const commonCode = eventData?.d?.m[feedEvent]?.o?.[feedSelection]?.c
+      .replace("$C1", homeName)
+      .replace("$C2", awayName);
+    const checkValue = market_rules[row.sport]?.[cCode]?.common?.[commonCode] ?? "";
+    if (checkValue && eval(pCode)) {
+      if (eval(checkValue)) console.log(checkValue, "Bet Win!");
+      else console.log(checkValue, "Bet Lose!");
+    } else {
+      console.log("Cannot grade.", cCode, checkValue);
+    }
+  });
 }, 2000);
