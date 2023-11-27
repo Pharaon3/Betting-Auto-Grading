@@ -1,0 +1,3148 @@
+{
+    "dt": "2023-11-19T20:58:12Z",
+    "d": {
+        "i": 50020074461,
+        "s": {
+            "i": 50,
+            "n": "Football"
+        },
+        "l": {
+            "i": 159667,
+            "n": "World Cup Qual. - Africa"
+        },
+        "n": "Niger vs Tanzania",
+        "c1": {
+            "n": "Niger"
+        },
+        "c2": {
+            "n": "Tanzania"
+        },
+        "rv": 0,
+        "et": "2023-11-18T16:00:00Z",
+        "b": 1,
+        "lv": 0,
+        "gce": 1,
+        "cl": {
+            "m": 97,
+            "s": 29,
+            "r": 0
+        },
+        "p": {
+            "i": 255,
+            "c": "",
+            "n": "Ended"
+        },
+        "ps": {
+            "1": {
+                "score": {
+                    "c1": 0,
+                    "c2": 0
+                }
+            },
+            "2": {
+                "score": {
+                    "c1": 0,
+                    "c2": 1
+                }
+            },
+            "TN": {
+                "score": {
+                    "c1": 0,
+                    "c2": 1
+                }
+            },
+            "ET": {
+                "score": {
+                    "c1": 0,
+                    "c2": 1
+                }
+            },
+            "CS": {
+                "score": {
+                    "c1": 0,
+                    "c2": 1
+                }
+            }
+        },
+        "ap": 1,
+        "mdt": "2023-11-18T18:05:09Z",
+        "rm": "2023-11-18T18:00:33Z",
+        "m": {
+            "1": {
+                "i": 1,
+                "c": "ML",
+                "n": "Moneyline",
+                "t": "Moneyline",
+                "b": 1,
+                "rm": 1,
+                "tt": 83,
+                "pd": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 51,
+                        "va": "+5000",
+                        "a": [],
+                        "tt": 1,
+                        "pd": 1,
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "Draw",
+                        "t": "Draw",
+                        "v": 14,
+                        "va": "+1300",
+                        "a": [],
+                        "tt": 2,
+                        "pd": 2,
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 1.025,
+                        "va": "-4000",
+                        "a": [],
+                        "tt": 4,
+                        "pd": 3,
+                        "rm": 0
+                    }
+                }
+            },
+            "2": {
+                "i": 2,
+                "c": "DRAW_NO_BET_REGULAR_TIME",
+                "n": "Draw No Bet (Regular Time)",
+                "t": "Tie No Bet",
+                "b": 1,
+                "rm": 1,
+                "g": "Draw No Bet (Regular Time)",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 17,
+                        "va": "+1600",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 1.60606061,
+                        "va": "-165",
+                        "a": [],
+                        "rm": 1
+                    }
+                }
+            },
+            "3": {
+                "i": 3,
+                "c": "TOTAL_GOALS_REGULAR_TIME",
+                "n": "Total Goals (Regular Time)",
+                "t": "Total Goals",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals (Regular Time)",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 1.74074075,
+                        "va": "-135",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.95238096,
+                        "va": "-105",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 5.75,
+                        "va": "+475",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.0909091,
+                        "va": "-1100",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 2.5",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 2.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 3.5",
+                        "v": 11,
+                        "va": "+1000",
+                        "a": [
+                            3.5
+                        ],
+                        "rm": 1
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 3.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            3.5
+                        ],
+                        "rm": 1
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 4.5",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [
+                            4.5
+                        ],
+                        "rm": 1
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 4.5",
+                        "v": 1.0125,
+                        "va": "-8000",
+                        "a": [
+                            4.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "4": {
+                "i": 4,
+                "c": "SPREAD",
+                "n": "Spread",
+                "t": "Spread",
+                "b": 1,
+                "rm": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger -1.5",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            -1.5
+                        ],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania +1.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger -0.5",
+                        "v": 4.4,
+                        "va": "+340",
+                        "a": [
+                            -0.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania +0.5",
+                        "v": 1.16666667,
+                        "va": "-600",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger +0.5",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania -0.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            -0.5
+                        ],
+                        "rm": 0
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger +1.5",
+                        "v": 1.02857143,
+                        "va": "-3500",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania -1.5",
+                        "v": 8.5,
+                        "va": "+750",
+                        "a": [
+                            -1.5
+                        ],
+                        "rm": 0
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger +2.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania -2.5",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [
+                            -2.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "5": {
+                "i": 5,
+                "c": "BOTH_TEAMS_TO_SCORE",
+                "n": "Both Teams to Score",
+                "t": "Both Teams to Score",
+                "b": 1,
+                "rm": 1,
+                "g": "Both Teams to Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "Y",
+                        "n": "Yes",
+                        "t": "Yes",
+                        "v": 11,
+                        "va": "+1000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "N",
+                        "n": "No",
+                        "t": "No",
+                        "v": 1.025,
+                        "va": "-4000",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "6": {
+                "i": 6,
+                "c": "CORRECT_SCORE",
+                "n": "Correct Score",
+                "t": "Correct Score",
+                "b": 1,
+                "rm": 1,
+                "g": "Correct Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1:0",
+                        "n": "1:0",
+                        "t": "1:0",
+                        "v": 4.7,
+                        "va": "+370",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2:0",
+                        "n": "2:0",
+                        "t": "2:0",
+                        "v": 26,
+                        "va": "+2500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2:1",
+                        "n": "2:1",
+                        "t": "2:1",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "3:0",
+                        "n": "3:0",
+                        "t": "3:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "3:1",
+                        "n": "3:1",
+                        "t": "3:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "3:2",
+                        "n": "3:2",
+                        "t": "3:2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "4:0",
+                        "n": "4:0",
+                        "t": "4:0",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "4:1",
+                        "n": "4:1",
+                        "t": "4:1",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "4:2",
+                        "n": "4:2",
+                        "t": "4:2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "0:0",
+                        "n": "0:0",
+                        "t": "0:0",
+                        "v": 1.71428572,
+                        "va": "-140",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "11": {
+                        "i": 11,
+                        "c": "1:1",
+                        "n": "1:1",
+                        "t": "1:1",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "g": "X",
+                        "rm": 0
+                    },
+                    "12": {
+                        "i": 12,
+                        "c": "2:2",
+                        "n": "2:2",
+                        "t": "2:2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "13": {
+                        "i": 13,
+                        "c": "3:3",
+                        "n": "3:3",
+                        "t": "3:3",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "14": {
+                        "i": 14,
+                        "c": "0:1",
+                        "n": "1:0",
+                        "t": "1:0",
+                        "v": 1.025,
+                        "va": "-4000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 0
+                    },
+                    "15": {
+                        "i": 15,
+                        "c": "0:2",
+                        "n": "2:0",
+                        "t": "2:0",
+                        "v": 10,
+                        "va": "+900",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 0
+                    },
+                    "16": {
+                        "i": 16,
+                        "c": "1:2",
+                        "n": "2:1",
+                        "t": "2:1",
+                        "v": 61,
+                        "va": "+6000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 0
+                    },
+                    "17": {
+                        "i": 17,
+                        "c": "0:3",
+                        "n": "3:0",
+                        "t": "3:0",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 0
+                    },
+                    "18": {
+                        "i": 18,
+                        "c": "1:3",
+                        "n": "3:1",
+                        "t": "3:1",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "19": {
+                        "i": 19,
+                        "c": "2:3",
+                        "n": "3:2",
+                        "t": "3:2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "20": {
+                        "i": 20,
+                        "c": "0:4",
+                        "n": "4:0",
+                        "t": "4:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "21": {
+                        "i": 21,
+                        "c": "1:4",
+                        "n": "4:1",
+                        "t": "4:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "22": {
+                        "i": 22,
+                        "c": "2:4",
+                        "n": "4:2",
+                        "t": "4:2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "23": {
+                        "i": 23,
+                        "c": "3:4",
+                        "n": "4:3",
+                        "t": "4:3",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "24": {
+                        "i": 24,
+                        "c": "0:5",
+                        "n": "5:0",
+                        "t": "5:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    }
+                }
+            },
+            "7": {
+                "i": 7,
+                "c": "DOUBLE_CHANCE",
+                "n": "Double Chance",
+                "t": "Double Chance",
+                "b": 1,
+                "rm": 1,
+                "g": "Double Chance",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "TIE_OR_TANZANIA",
+                        "n": "Tie or Tanzania",
+                        "t": "Tie or Tanzania",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NIGER_OR_TANZANIA",
+                        "n": "Niger or Tanzania",
+                        "t": "Niger or Tanzania",
+                        "v": 1.02,
+                        "va": "-5000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "NIGER_OR_TIE",
+                        "n": "Niger or Tie",
+                        "t": "Niger or Tie",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "8": {
+                "i": 8,
+                "c": "TOTAL_GOALS_OE",
+                "n": "Total Goals Odd/Even",
+                "t": "Total Goals Odd/Even",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals Odd/Even",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "E",
+                        "n": "Even",
+                        "t": "Even",
+                        "v": 6,
+                        "va": "+500",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "O",
+                        "n": "Odd",
+                        "t": "Odd",
+                        "v": 1.08333334,
+                        "va": "-1200",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "9": {
+                "i": 9,
+                "c": "MONEYLINE/TOTAL:1.5",
+                "n": "Moneyline/Total",
+                "t": "Moneyline / Over/Under 1.5",
+                "b": 1,
+                "rm": 1,
+                "g": "Moneyline/Total",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "NIGER_WIN_AND_OVER_1.5",
+                        "n": "Niger win and over 1.5",
+                        "t": "Niger win and over 1.5",
+                        "v": 6.5,
+                        "va": "+550",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NIGER_WIN_AND_UNDER_1.5",
+                        "n": "Niger win and under 1.5",
+                        "t": "Niger win and under 1.5",
+                        "v": 7,
+                        "va": "+600",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "TIE_AND_OVER_1.5",
+                        "n": "Tie and over 1.5",
+                        "t": "Tie and over 1.5",
+                        "v": 4.8,
+                        "va": "+380",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "TIE_AND_UNDER_1.5",
+                        "n": "Tie and under 1.5",
+                        "t": "Tie and under 1.5",
+                        "v": 6,
+                        "va": "+500",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "TANZANIA_WIN_AND_OVER_1.5",
+                        "n": "Tanzania win and over 1.5",
+                        "t": "Tanzania win and over 1.5",
+                        "v": 3.75,
+                        "va": "+275",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "TANZANIA_WIN_AND_UNDER_1.5",
+                        "n": "Tanzania win and under 1.5",
+                        "t": "Tanzania win and under 1.5",
+                        "v": 5.5,
+                        "va": "+450",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "10": {
+                "i": 10,
+                "c": "MONEYLINE/TOTAL:2.5",
+                "n": "Moneyline/Total",
+                "t": "Moneyline / Over/Under 2.5",
+                "b": 1,
+                "rm": 1,
+                "g": "Moneyline/Total",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "TIE_AND_OVER_2.5",
+                        "n": "Tie and Over 2.5",
+                        "t": "Tie and Over 2.5",
+                        "v": 18,
+                        "va": "+1700",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "TANZANIA_WIN_AND_OVER_2.5",
+                        "n": "Tanzania Win and Over 2.5",
+                        "t": "Tanzania Win and Over 2.5",
+                        "v": 5.25,
+                        "va": "+425",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "NIGER_WIN_AND_OVER_2.5",
+                        "n": "Niger Win and Over 2.5",
+                        "t": "Niger Win and Over 2.5",
+                        "v": 8.5,
+                        "va": "+750",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "TANZANIA_WIN_AND_UNDER_2.5",
+                        "n": "Tanzania Win and Under 2.5",
+                        "t": "Tanzania Win and Under 2.5",
+                        "v": 3.5,
+                        "va": "+250",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "TIE_AND_UNDER_2.5",
+                        "n": "Tie and Under 2.5",
+                        "t": "Tie and Under 2.5",
+                        "v": 3,
+                        "va": "+200",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "NIGER_WIN_AND_UNDER_2.5",
+                        "n": "Niger Win and Under 2.5",
+                        "t": "Niger Win and Under 2.5",
+                        "v": 5,
+                        "va": "+400",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "11": {
+                "i": 11,
+                "c": "MONEYLINE/TOTAL:3.5",
+                "n": "Moneyline/Total",
+                "t": "Moneyline / Over/Under 3.5",
+                "b": 1,
+                "rm": 1,
+                "g": "Moneyline/Total",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "NIGER_WIN_AND_OVER_3.5",
+                        "n": "Niger Win and Over 3.5",
+                        "t": "Niger Win and Over 3.5",
+                        "v": 21,
+                        "va": "+2000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "TIE_AND_OVER_3.5",
+                        "n": "Tie and Over 3.5",
+                        "t": "Tie and Over 3.5",
+                        "v": 17,
+                        "va": "+1600",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "TANZANIA_WIN_AND_OVER_3.5",
+                        "n": "Tanzania Win and Over 3.5",
+                        "t": "Tanzania Win and Over 3.5",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "TIE_AND_UNDER_3.5",
+                        "n": "Tie and Under 3.5",
+                        "t": "Tie and Under 3.5",
+                        "v": 2.8,
+                        "va": "+180",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "NIGER_WIN_AND_UNDER_3.5",
+                        "n": "Niger Win and Under 3.5",
+                        "t": "Niger Win and Under 3.5",
+                        "v": 3.5,
+                        "va": "+250",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "TANZANIA_WIN_AND_UNDER_3.5",
+                        "n": "Tanzania Win and Under 3.5",
+                        "t": "Tanzania Win and Under 3.5",
+                        "v": 2.35,
+                        "va": "+135",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "12": {
+                "i": 12,
+                "c": "HALF_TIME/FULL_TIME",
+                "n": "Half Time/Full Time",
+                "t": "Half Time / Full Time",
+                "b": 1,
+                "rm": 1,
+                "g": "Half Time/Full Time",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "NIGER/NIGER",
+                        "n": "Niger/Niger",
+                        "t": "Niger/Niger",
+                        "v": 29,
+                        "va": "+2800",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NIGER/TANZANIA",
+                        "n": "Niger/Tanzania",
+                        "t": "Niger/Tanzania",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "NIGER/TIE",
+                        "n": "Niger/Tie",
+                        "t": "Niger/Tie",
+                        "v": 51,
+                        "va": "+5000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "TIE/TIE",
+                        "n": "Tie/Tie",
+                        "t": "Tie/Tie",
+                        "v": 1.90909091,
+                        "va": "-110",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "TIE/NIGER",
+                        "n": "Tie/Niger",
+                        "t": "Tie/Niger",
+                        "v": 4.3,
+                        "va": "+330",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "TIE/TANZANIA",
+                        "n": "Tie/Tanzania",
+                        "t": "Tie/Tanzania",
+                        "v": 3.1,
+                        "va": "+210",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "TANZANIA/TIE",
+                        "n": "Tanzania/Tie",
+                        "t": "Tanzania/Tie",
+                        "v": 51,
+                        "va": "+5000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "TANZANIA/TANZANIA",
+                        "n": "Tanzania/Tanzania",
+                        "t": "Tanzania/Tanzania",
+                        "v": 20,
+                        "va": "+1900",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "TANZANIA/NIGER",
+                        "n": "Tanzania/Niger",
+                        "t": "Tanzania/Niger",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "13": {
+                "i": 13,
+                "c": "BOTH_TEAMS_TO_SCORE_EXTRA_TIME",
+                "n": "Both Teams to Score",
+                "t": "Both Teams to Score / Over 2.5 Goals",
+                "b": 1,
+                "rm": 1,
+                "g": "Both Teams to Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "Y",
+                        "n": "Yes",
+                        "t": "Yes",
+                        "v": 3.5,
+                        "va": "+250",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "N",
+                        "n": "No",
+                        "t": "No",
+                        "v": 1.25,
+                        "va": "-400",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "14": {
+                "i": 14,
+                "c": "TOTAL_TEAM_GOALS/C:1",
+                "n": "Total Team Goals",
+                "t": "Niger: Team Total Goals",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Team Goals",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.02,
+                        "va": "-5000",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 2.5",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 2.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "15": {
+                "i": 15,
+                "c": "TOTAL_TEAM_GOALS/C:2",
+                "n": "Total Team Goals",
+                "t": "Tanzania: Team Total Goals",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Team Goals",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.44444445,
+                        "va": "-225",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 2.5",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 2.6,
+                        "va": "+160",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 9,
+                        "va": "+800",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.04,
+                        "va": "-2500",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 2.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "16": {
+                "i": 16,
+                "c": "EXACT_TEAM_TOTAL_GOALS",
+                "n": "Exact Team Total Goals",
+                "t": "Team Total Number of Goals",
+                "b": 1,
+                "rm": 1,
+                "g": "Exact Team Total Goals",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1/0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "1/1",
+                        "n": "1",
+                        "t": "1",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "1/2",
+                        "n": "2",
+                        "t": "2",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "1/3",
+                        "n": "3",
+                        "t": "3",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "1/4+",
+                        "n": "4+",
+                        "t": "4+",
+                        "v": 101,
+                        "va": "+10000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "2/0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 1.39215687,
+                        "va": "-255",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "2/1",
+                        "n": "1",
+                        "t": "1",
+                        "v": 1.01666667,
+                        "va": "-6000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "2/2",
+                        "n": "2",
+                        "t": "2",
+                        "v": 10,
+                        "va": "+900",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "2/3",
+                        "n": "3",
+                        "t": "3",
+                        "v": 66,
+                        "va": "+6500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "2/4+",
+                        "n": "4+",
+                        "t": "4+",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    },
+                    "11": {
+                        "i": 11,
+                        "c": "2/4",
+                        "n": "4",
+                        "t": "4",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "12": {
+                        "i": 12,
+                        "c": "2/5+",
+                        "n": "5+",
+                        "t": "5+",
+                        "v": 101,
+                        "va": "+10000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    }
+                }
+            },
+            "17": {
+                "i": 17,
+                "c": "TEAM_TOTALS_OE",
+                "n": "Team Totals Odd/Even",
+                "t": "Team Total Goals Odd/Even",
+                "b": 1,
+                "rm": 1,
+                "g": "Team Totals Odd/Even",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1/E",
+                        "n": "1/Even",
+                        "t": "Niger - Even",
+                        "v": 1.01666667,
+                        "va": "-6000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2/E",
+                        "n": "2/Even",
+                        "t": "Tanzania - Even",
+                        "v": 9,
+                        "va": "+800",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "1/O",
+                        "n": "1/Odd",
+                        "t": "Niger - Odd",
+                        "v": 11,
+                        "va": "+1000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "2/O",
+                        "n": "2/Odd",
+                        "t": "Tanzania - Odd",
+                        "v": 1.04,
+                        "va": "-2500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    }
+                }
+            },
+            "18": {
+                "i": 18,
+                "c": "ASIAN_TOTAL",
+                "n": "Asian Total",
+                "t": "Total",
+                "b": 1,
+                "rm": 1,
+                "g": "Asian Total",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.75",
+                        "v": 8.5,
+                        "va": "+750",
+                        "a": [
+                            1.75
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.75",
+                        "v": 1.02857143,
+                        "va": "-3500",
+                        "a": [
+                            1.75
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 2",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            2
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 2",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [
+                            2
+                        ],
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 5.75,
+                        "va": "+475",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.0909091,
+                        "va": "-1100",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 0
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.25",
+                        "v": 2.55,
+                        "va": "+155",
+                        "a": [
+                            1.25
+                        ],
+                        "rm": 1
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.25",
+                        "v": 1.43478261,
+                        "va": "-230",
+                        "a": [
+                            1.25
+                        ],
+                        "rm": 1
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1",
+                        "v": 3.4,
+                        "va": "+240",
+                        "a": [
+                            1
+                        ],
+                        "rm": 1
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1",
+                        "v": 1.2631579,
+                        "va": "-380",
+                        "a": [
+                            1
+                        ],
+                        "rm": 1
+                    },
+                    "11": {
+                        "i": 11,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.75",
+                        "v": 2.15,
+                        "va": "+115",
+                        "a": [
+                            0.75
+                        ],
+                        "rm": 1
+                    },
+                    "12": {
+                        "i": 12,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.75",
+                        "v": 1.60606061,
+                        "va": "-165",
+                        "a": [
+                            0.75
+                        ],
+                        "rm": 1
+                    },
+                    "13": {
+                        "i": 13,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 1.74074075,
+                        "va": "-135",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "14": {
+                        "i": 14,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.95238096,
+                        "va": "-105",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "19": {
+                "i": 19,
+                "c": "MONEYLINE_HALF_3W/H:1",
+                "n": "Moneyline (3-Way)",
+                "t": "Moneyline 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Moneyline (3-Way)",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 19,
+                        "va": "+1800",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "Draw",
+                        "t": "Draw",
+                        "v": 1.05,
+                        "va": "-2000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 15,
+                        "va": "+1400",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "20": {
+                "i": 20,
+                "c": "MONEYLINE_HALF_3W/H:2",
+                "n": "Moneyline (3-Way)",
+                "t": "Moneyline 2nd Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Moneyline (3-Way)",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 3.9,
+                        "va": "+290",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "Draw",
+                        "t": "Draw",
+                        "v": 2.05,
+                        "va": "+105",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 2.75,
+                        "va": "+175",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "21": {
+                "i": 21,
+                "c": "TOTAL_OU/H:1",
+                "n": "Total 1 Half",
+                "t": "First Half Goals",
+                "b": 1,
+                "rm": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 8.5,
+                        "va": "+750",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.03333334,
+                        "va": "-3000",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 2.5",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 2.5",
+                        "v": 1.01666667,
+                        "va": "-6000",
+                        "a": [
+                            2.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "22": {
+                "i": 22,
+                "c": "CORRECT_SCORE_HALF/H:1",
+                "n": "Correct Score Half",
+                "t": "Correct Score - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Correct Score Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1:0",
+                        "n": "1:0",
+                        "t": "1:0",
+                        "v": 51,
+                        "va": "+5000",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2:0",
+                        "n": "2:0",
+                        "t": "2:0",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2:1",
+                        "n": "2:1",
+                        "t": "2:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "3:0",
+                        "n": "3:0",
+                        "t": "3:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "3:1",
+                        "n": "3:1",
+                        "t": "3:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Niger",
+                        "g": "1",
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "0:0",
+                        "n": "0:0",
+                        "t": "0:0",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "1:1",
+                        "n": "1:1",
+                        "t": "1:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "2:2",
+                        "n": "2:2",
+                        "t": "2:2",
+                        "v": 71,
+                        "va": "+7000",
+                        "a": [],
+                        "g": "X",
+                        "rm": 1
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "0:1",
+                        "n": "1:0",
+                        "t": "1:0",
+                        "v": 41,
+                        "va": "+4000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 0
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "0:2",
+                        "n": "2:0",
+                        "t": "2:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "11": {
+                        "i": 11,
+                        "c": "1:2",
+                        "n": "2:1",
+                        "t": "2:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "12": {
+                        "i": 12,
+                        "c": "0:3",
+                        "n": "3:0",
+                        "t": "3:0",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    },
+                    "13": {
+                        "i": 13,
+                        "c": "1:3",
+                        "n": "3:1",
+                        "t": "3:1",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "g": "2",
+                        "rm": 1
+                    }
+                }
+            },
+            "23": {
+                "i": 23,
+                "c": "TEAM_TO_SCORE_HALF/H:1",
+                "n": "Team to Score - X Half",
+                "t": "Team to Score - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Team to Score - X Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1/Y",
+                        "n": "Yes",
+                        "t": "Niger - Yes",
+                        "v": 16,
+                        "va": "+1500",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2/Y",
+                        "n": "Yes",
+                        "t": "Tanzania - Yes",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2/N",
+                        "n": "No",
+                        "t": "Tanzania - No",
+                        "v": 1.0125,
+                        "va": "-8000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "1/N",
+                        "n": "No",
+                        "t": "Niger - No",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    }
+                }
+            },
+            "24": {
+                "i": 24,
+                "c": "TOTAL_GOALS_BANDS_HALF/H:1",
+                "n": "Total Goals (Bands) Half",
+                "t": "Total Goals (Bands) - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals (Bands) Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "0-1",
+                        "n": "0-1",
+                        "t": "0-1",
+                        "v": 1.15384616,
+                        "va": "-650",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "1+",
+                        "n": "1+",
+                        "t": "1+",
+                        "v": 1.52631579,
+                        "va": "-190",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 1.95238096,
+                        "va": "-105",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "2+",
+                        "n": "2+",
+                        "t": "2+",
+                        "v": 3.7,
+                        "va": "+270",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "3+",
+                        "n": "3+",
+                        "t": "3+",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "25": {
+                "i": 25,
+                "c": "TOTAL_GOALS_BANDS_HALF/H:2",
+                "n": "Total Goals (Bands) Half",
+                "t": "Total Goals (Bands) - 2nd Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals (Bands) Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "0-1",
+                        "n": "0-1",
+                        "t": "0-1",
+                        "v": 1.27027028,
+                        "va": "-370",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "1+",
+                        "n": "1+",
+                        "t": "1+",
+                        "v": 1.33898306,
+                        "va": "-295",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 2.4,
+                        "va": "+140",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "2+",
+                        "n": "2+",
+                        "t": "2+",
+                        "v": 2.7,
+                        "va": "+170",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "3+",
+                        "n": "3+",
+                        "t": "3+",
+                        "v": 8,
+                        "va": "+700",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "26": {
+                "i": 26,
+                "c": "TO_WIN_EITHER_HALF",
+                "n": "To Win Either Half",
+                "t": "Team to Win Either Half",
+                "b": 1,
+                "rm": 1,
+                "g": "To Win Either Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 3.8,
+                        "va": "+280",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 2.8,
+                        "va": "+180",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "27": {
+                "i": 27,
+                "c": "DOUBLE_CHANCE_HALF/H:1",
+                "n": "Double Chance - 1st Half",
+                "t": "Double Chance - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Double Chance - 1st Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "TIE_OR_TANZANIA",
+                        "n": "Tie or Tanzania",
+                        "t": "Tie or Tanzania",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NIGER_OR_TIE",
+                        "n": "Niger or Tie",
+                        "t": "Niger or Tie",
+                        "v": 1.0125,
+                        "va": "-8000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "NIGER_OR_TANZANIA",
+                        "n": "Niger or Tanzania",
+                        "t": "Niger or Tanzania",
+                        "v": 10.5,
+                        "va": "+950",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "28": {
+                "i": 28,
+                "c": "EXACT_GOALS_HALF/H:1",
+                "n": "Exact Goals - X Half",
+                "t": "Total Number of Goals - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Exact Goals - X Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1_GOAL",
+                        "n": "1 Goal",
+                        "t": "1 Goal",
+                        "v": 9.5,
+                        "va": "+850",
+                        "a": [],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NO_GOALS",
+                        "n": "No Goals",
+                        "t": "No Goals",
+                        "v": 1.03333334,
+                        "va": "-3000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2_GOALS",
+                        "n": "2 Goals",
+                        "t": "2 Goals",
+                        "v": 76,
+                        "va": "+7500",
+                        "a": [],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "3_GOALS_OR_MORE",
+                        "n": "3 Goals or more",
+                        "t": "3 Goals or more",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "rm": 1
+                    }
+                }
+            },
+            "29": {
+                "i": 29,
+                "c": "EXACT_TEAM_GOALS_HALF/TEAM_TOTAL_NUMBER_OF_GOALS_-_1ST_HALF",
+                "n": "Exact Team Goals - 1st Half",
+                "t": "Team Total Number of Goals - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Exact Team Goals - 1st Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1/0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 1.02857143,
+                        "va": "-3500",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "1/1",
+                        "n": "1",
+                        "t": "1",
+                        "v": 21,
+                        "va": "+2000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "1/2",
+                        "n": "2",
+                        "t": "2",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "1/3",
+                        "n": "3",
+                        "t": "3",
+                        "v": 101,
+                        "va": "+10000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "1/4+",
+                        "n": "4+",
+                        "t": "4+",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "2/0",
+                        "n": "0",
+                        "t": "0",
+                        "v": 1.01666667,
+                        "va": "-6000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "2/1",
+                        "n": "1",
+                        "t": "1",
+                        "v": 16,
+                        "va": "+1500",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "2/2",
+                        "n": "2",
+                        "t": "2",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "9": {
+                        "i": 9,
+                        "c": "2/3",
+                        "n": "3",
+                        "t": "3",
+                        "v": 101,
+                        "va": "+10000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    },
+                    "10": {
+                        "i": 10,
+                        "c": "2/4+",
+                        "n": "4+",
+                        "t": "4+",
+                        "v": 91,
+                        "va": "+9000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 1
+                    }
+                }
+            },
+            "30": {
+                "i": 30,
+                "c": "TOTAL_GOALS_ODD/EVEN_HALF/H:1",
+                "n": "Total Goals - Odd/Even Half",
+                "t": "Total Goals Odd/Even - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals - Odd/Even Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "EVEN",
+                        "n": "Even",
+                        "t": "Even",
+                        "v": 1.03333334,
+                        "va": "-3000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "ODD",
+                        "n": "Odd",
+                        "t": "Odd",
+                        "v": 9,
+                        "va": "+800",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "31": {
+                "i": 31,
+                "c": "TOTAL_GOALS_ODD/EVEN_HALF/H:2",
+                "n": "Total Goals - Odd/Even Half",
+                "t": "Total Goals Odd/Even - 2nd Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Goals - Odd/Even Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "EVEN",
+                        "n": "Even",
+                        "t": "Even",
+                        "v": 1.68965518,
+                        "va": "-145",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "ODD",
+                        "n": "Odd",
+                        "t": "Odd",
+                        "v": 2.1,
+                        "va": "+110",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "32": {
+                "i": 32,
+                "c": "TOTAL_CORNERS_FULL_TIME",
+                "n": "Total Corners - Full Time",
+                "t": "Total Corners",
+                "b": 1,
+                "rm": 1,
+                "g": "Total Corners - Full Time",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 8.5",
+                        "v": 1.8,
+                        "va": "-125",
+                        "a": [
+                            8.5
+                        ],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 8.5",
+                        "v": 1.95238096,
+                        "va": "-105",
+                        "a": [
+                            8.5
+                        ],
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 9.5",
+                        "v": 2.1,
+                        "va": "+110",
+                        "a": [
+                            9.5
+                        ],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 9.5",
+                        "v": 1.66666667,
+                        "va": "-150",
+                        "a": [
+                            9.5
+                        ],
+                        "rm": 0
+                    }
+                }
+            },
+            "33": {
+                "i": 33,
+                "c": "ML/ROG",
+                "n": "Rest of Match Result",
+                "t": "Moneyline - Rest of Game",
+                "b": 1,
+                "rm": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 14,
+                        "va": "+1300",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "Tie",
+                        "t": "Tie",
+                        "v": 1.11111112,
+                        "va": "-900",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 11,
+                        "va": "+1000",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "34": {
+                "i": 34,
+                "c": "FIRST_GOAL",
+                "n": "First Goal",
+                "t": "1st Goal",
+                "b": 1,
+                "rm": 1,
+                "g": "First Goal",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "NIGER",
+                        "n": "Niger",
+                        "t": "Niger",
+                        "v": 4,
+                        "va": "+300",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "TANZANIA",
+                        "n": "Tanzania",
+                        "t": "Tanzania",
+                        "v": 3,
+                        "va": "+200",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "NO_GOAL",
+                        "n": "No Goal",
+                        "t": "No Goal",
+                        "v": 2,
+                        "va": "+100",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "35": {
+                "i": 35,
+                "c": "LAST_GOAL",
+                "n": "Last Goal",
+                "t": "Last Goal",
+                "b": 1,
+                "rm": 1,
+                "g": "Last Goal",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "NIGER",
+                        "n": "Niger",
+                        "t": "Niger",
+                        "v": 11,
+                        "va": "+1000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "NO_GOAL",
+                        "n": "No Goal",
+                        "t": "No Goal",
+                        "v": 1.90909091,
+                        "va": "-110",
+                        "a": [],
+                        "rm": 1
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "TANZANIA",
+                        "n": "Tanzania",
+                        "t": "Tanzania",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "36": {
+                "i": 36,
+                "c": "TEAM_TO_WIN_TO_NIL",
+                "n": "Team to Win to Nil",
+                "t": "Team to Win to Nil",
+                "b": 1,
+                "rm": 1,
+                "g": "Team to Win to Nil",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 4.7,
+                        "va": "+370",
+                        "a": [],
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 1.02,
+                        "va": "-5000",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "37": {
+                "i": 37,
+                "c": "ASIAN_HANDICAP",
+                "n": "Asian Handicap",
+                "t": "Asian Handicap",
+                "b": 1,
+                "rm": 1,
+                "g": "Asian Handicap",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger 0",
+                        "v": 2.25,
+                        "va": "+125",
+                        "a": [
+                            0
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania 0",
+                        "v": 1.625,
+                        "va": "-160",
+                        "a": [
+                            0
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger +0.25",
+                        "v": 1.0909091,
+                        "va": "-1100",
+                        "a": [
+                            0.25
+                        ],
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania -0.25",
+                        "v": 5.75,
+                        "va": "+475",
+                        "a": [
+                            -0.25
+                        ],
+                        "rm": 0
+                    },
+                    "5": {
+                        "i": 5,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger +0.5",
+                        "v": 1.21052632,
+                        "va": "-475",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 1
+                    },
+                    "6": {
+                        "i": 6,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania -0.5",
+                        "v": 3.9,
+                        "va": "+290",
+                        "a": [
+                            -0.5
+                        ],
+                        "rm": 1
+                    },
+                    "7": {
+                        "i": 7,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger -0.25",
+                        "v": 7.5,
+                        "va": "+650",
+                        "a": [
+                            -0.25
+                        ],
+                        "rm": 0
+                    },
+                    "8": {
+                        "i": 8,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania +0.25",
+                        "v": 1.05,
+                        "va": "-2000",
+                        "a": [
+                            0.25
+                        ],
+                        "rm": 0
+                    }
+                }
+            },
+            "38": {
+                "i": 38,
+                "c": "BOTH_TEAMS_TO_SCORE_HALF/H:1",
+                "n": "Both Teams to Score",
+                "t": "Both Teams to Score - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Both Teams to Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "Y",
+                        "n": "Yes",
+                        "t": "Yes",
+                        "v": 16,
+                        "va": "+1500",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "N",
+                        "n": "No",
+                        "t": "No",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [],
+                        "rm": 1
+                    }
+                }
+            },
+            "39": {
+                "i": 39,
+                "c": "BOTH_TEAMS_TO_SCORE_HALF/H:2",
+                "n": "Both Teams to Score",
+                "t": "Both Teams to Score - 2nd Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Both Teams to Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "Y",
+                        "n": "Yes",
+                        "t": "Yes",
+                        "v": 8.5,
+                        "va": "+750",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "N",
+                        "n": "No",
+                        "t": "No",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [],
+                        "rm": 1
+                    }
+                }
+            },
+            "40": {
+                "i": 40,
+                "c": "TEAM_TOTAL_OU/C:1/H:1",
+                "n": "Team Total X Half",
+                "t": "Niger: Team Total Goals - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 14,
+                        "va": "+1300",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 15,
+                        "va": "+1400",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "41": {
+                "i": 41,
+                "c": "TEAM_TOTAL_OU/C:2/H:1",
+                "n": "Team Total X Half",
+                "t": "Tanzania: Team Total Goals - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 0.5",
+                        "v": 13,
+                        "va": "+1200",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 0.5",
+                        "v": 1.0125,
+                        "va": "-8000",
+                        "a": [
+                            0.5
+                        ],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "O",
+                        "n": "Over",
+                        "t": "Over 1.5",
+                        "v": 15,
+                        "va": "+1400",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "U",
+                        "n": "Under",
+                        "t": "Under 1.5",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [
+                            1.5
+                        ],
+                        "rm": 1
+                    }
+                }
+            },
+            "42": {
+                "i": 42,
+                "c": "FIRST_TEAM_TO_SCORE",
+                "n": "First Team to Score",
+                "t": "1st Goal - 1st Half (3-Way)",
+                "b": 1,
+                "rm": 1,
+                "g": "First Team to Score",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 15,
+                        "va": "+1400",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "No Goal",
+                        "t": "No Goal",
+                        "v": 1.025,
+                        "va": "-4000",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [],
+                        "rm": 0
+                    }
+                }
+            },
+            "43": {
+                "i": 43,
+                "c": "TEAM_ODD/EVEN_HALF/H:1",
+                "n": "Team Odd/Even - X Half",
+                "t": "Team Total Goals Odd/Even - 1st Half",
+                "b": 1,
+                "rm": 1,
+                "g": "Team Odd/Even - X Half",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1/E",
+                        "n": "1/Even",
+                        "t": "Niger - Even",
+                        "v": 1.01,
+                        "va": "-10000",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 1
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "2/E",
+                        "n": "2/Even",
+                        "t": "Tanzania - Even",
+                        "v": 1.005,
+                        "va": "-20000",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2/O",
+                        "n": "2/Odd",
+                        "t": "Tanzania - Odd",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    },
+                    "4": {
+                        "i": 4,
+                        "c": "1/O",
+                        "n": "1/Odd",
+                        "t": "Niger - Odd",
+                        "v": 15,
+                        "va": "+1400",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    }
+                }
+            },
+            "44": {
+                "i": 44,
+                "c": "NEXT_GOAL/G:2",
+                "n": "Next Goal",
+                "t": "2nd Goal (3-Way)",
+                "b": 1,
+                "rm": 1,
+                "g": "Next Goal",
+                "o": {
+                    "1": {
+                        "i": 1,
+                        "c": "1",
+                        "n": "Home",
+                        "t": "Niger",
+                        "v": 12,
+                        "va": "+1100",
+                        "a": [],
+                        "p": "Niger",
+                        "rm": 0
+                    },
+                    "2": {
+                        "i": 2,
+                        "c": "X",
+                        "n": "No Goal",
+                        "t": "No 2nd Goal",
+                        "v": 1.125,
+                        "va": "-800",
+                        "a": [],
+                        "rm": 0
+                    },
+                    "3": {
+                        "i": 3,
+                        "c": "2",
+                        "n": "Away",
+                        "t": "Tanzania",
+                        "v": 10,
+                        "va": "+900",
+                        "a": [],
+                        "p": "Tanzania",
+                        "rm": 0
+                    }
+                }
+            }
+        }
+    }
+}

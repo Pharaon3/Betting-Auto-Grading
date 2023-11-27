@@ -1,0 +1,479 @@
+{
+  "Soccer": {
+    "ML": {
+      "common": {
+        "1": "c1 > c2",
+        "2": "c1 < c2",
+        "X": "c1 == c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type = periodscore && name == \"1st half\"",
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "p.n != \"1st Half\" && cl.m > 45",
+        "path": "ps.1.score"
+      }
+    },
+    "TOTAL_GOALS_REGULAR_TIME": {
+      "common": {
+        "O": "(c1 + c2) > a",
+        "U": "(c1 + c2) < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "BOTH_TEAMS_TO_SCORE": {
+      "common": {
+        "Y": "c1 > 0 && c2 > 0",
+        "N": "c1 == 0 || c2 == 0",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "TOTAL_GOALS_OE": {
+      "common": {
+        "E": "!((c1 + c2) % 2)",
+        "O": "((c1 + c2) % 2)",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "DOUBLE_CHANCE": {
+      "common": {
+        "TIE_OR_$C1": "c1 == c2 || c1 > c1",
+        "$C1_OR_$C2": "c1 > c2 || c1 < c2",
+        "$C2_OR_TIE": "c2 > c1 || c2 == c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "MONEYLINE/TOTAL:1.5": {
+      "common": {
+        "$C1_WIN_AND_OVER_1.5": "c1 > c2 && (c1 + c2) > 1.5",
+        "$C1_WIN_AND_UNDER_1.5": "c1 > c2 && (c1 + c2) < 1.5",
+        "TIE_AND_OVER_1.5": "c1 == c2 && (c1 + c2) > 1.5",
+        "TIE_AND_UNDER_1.5": "c1 == c2 && (c1 + c2) < 1.5",
+        "$C2_WIN_AND_OVER_1.5": "c2 > c1 && (c1 + c2) > 1.5",
+        "$C2_WIN_AND_UNDER_1.5": "c2 > c1 && (c1 + c2) < 1.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "MONEYLINE/TOTAL:2.5": {
+      "common": {
+        "$C1_WIN_AND_OVER_2.5": "c1 > c2 && c1 > 2.5",
+        "$C1_WIN_AND_UNDER_2.5": "c1 > c2 && c1 < 2.5",
+        "TIE_AND_OVER_2.5": "c1 == c2 && c1 > 2.5",
+        "TIE_AND_UNDER_2.5": "c1 == c2 && c1 < 2.5",
+        "$C2_WIN_AND_OVER_2.5": "c2 > c1 && c2 > 2.5",
+        "$C2_WIN_AND_UNDER_2.5": "c2 > c1 && c2 < 2.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "MONEYLINE/TOTAL:3.5": {
+      "common": {
+        "$C1_WIN_AND_OVER_3.5": "c1 > c2 && c1 > 3.5",
+        "$C1_WIN_AND_UNDER_3.5": "c1 > c2 && c1 < 3.5",
+        "TIE_AND_OVER_3.5": "c1 == c2 && c1 > 3.5",
+        "TIE_AND_UNDER_3.5": "c1 == c2 && c1 < 3.5",
+        "$C2_WIN_AND_OVER_3.5": "c2 > c1 && c2 > 3.5",
+        "$C2_WIN_AND_UNDER_3.5": "c2 > c1 && c2 < 3.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "HALF_TIME/FULL_TIME": {
+      "common": {
+        "$C1/$C1": "c1_H1 > c2_H1 && c1 > c2",
+        "$C1/$C2": "c1_H1 > c2_H1 && c1 < c2",
+        "$C1/TIE": "c1_H1 > c2_H1 && c1 == c2",
+        "TIE/TIE": "c1_H1 == c2_H1 && c1 == c2",
+        "TIE/$C1": "c1_H1 == c2_H1 && c1 > c2",
+        "TIE/$C2": "c1_H1 == c2_H1 && c1 < c2",
+        "$C2/TIE": "c1_H1 < c2_H1 && c1 == c2",
+        "$C2/$C2": "c1_H1 < c2_H1 && c1 < c2",
+        "$C2/$C1": "c1_H1 < c2_H1 && c1 > c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score",
+        "path_H1": "ps.1.score"
+      }
+    },
+    "BOTH_TEAMS_TO_SCORE_EXTRA_TIME": {
+      "common": {
+        "Y": "c1 > 0 && c2 > 0",
+        "N": "c1 == 0 || c2 == 0",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.ET.score"
+      }
+    },
+    "TOTAL_TEAM_GOALS/C:1": {
+      "common": {
+        "O": "c1 > a",
+        "U": "c1 < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.ET.score"
+      }
+    },
+    "TOTAL_TEAM_GOALS/C:2": {
+      "common": {
+        "O": "c2 > a",
+        "U": "c2 < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.ET.score"
+      }
+    },
+    "EXACT_TEAM_TOTAL_GOALS": {
+      "common": {
+        "1/0": "c1 == 0",
+        "1/1": "c1 == 1",
+        "1/2": "c1 == 2",
+        "1/3": "c1 == 3",
+        "1/4+": "c1 > 3",
+        "2/0": "c2 == 0",
+        "2/1": "c2 == 1",
+        "2/2": "c2 == 2",
+        "2/3": "c2 == 3",
+        "2/4+": "c2 > 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "TEAM_TOTALS_OE": {
+      "common": {
+        "1/E": "!(c1 % 2)",
+        "2/E": "!(c2 % 2)",
+        "1/O": "(c1 % 2)",
+        "2/O": "(c2 % 2)",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "MONEYLINE_HALF_3W/H:1": {
+      "common": {
+        "1": "c1 > c2",
+        "X": "c1 == c2",
+        "2": "c1 < c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "MONEYLINE_HALF_3W/H:2": {
+      "common": {
+        "1": "c1 > c2",
+        "X": "c1 == c2",
+        "2": "c1 < c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_OU/H:1": {
+      "common": {
+        "O": "(c1 + c2) > a",
+        "U": "(c1 + c2) < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "CORRECT_SCORE_HALF/H:1": {
+      "common": {
+        "1:0": "c1 == 1 && c2 == 0",
+        "2:0": "c1 == 2 && c2 == 0",
+        "2:1": "c1 == 2 && c2 == 1",
+        "3:0": "c1 == 3 && c2 == 0",
+        "3:1": "c1 == 3 && c2 == 1",
+        "0:0": "c1 == 0 && c2 == 0",
+        "1:1": "c1 == 1 && c2 == 1",
+        "2:2": "c1 == 2 && c2 == 2",
+        "0:1": "c1 == 0 && c2 == 1",
+        "0:2": "c1 == 0 && c2 == 2",
+        "1:2": "c1 == 1 && c2 == 2",
+        "0:3": "c1 == 0 && c2 == 3",
+        "1:3": "c1 == 1 && c2 == 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "TEAM_TO_SCORE_HALF/H:1": {
+      "common": {
+        "1/Y": "c1 > 0",
+        "2/Y": "c2 > 0",
+        "1/N": "c1 == 0",
+        "2/N": "c2 == 0",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "TOTAL_GOALS_BANDS_HALF/H:1": {
+      "common": {
+        "0-1": "(c1 + c2) < 1.5",
+        "1+": "(c1 + c2) > 0.5",
+        "0": "(c1 + c2)  == 0",
+        "2+": "(c1 + c2) > 1.5",
+        "3+": "(c1 + c2) > 2.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "TOTAL_GOALS_BANDS_HALF/H:2": {
+      "common": {
+        "0-1": "(c1 + c2) < 1.5",
+        "1+": "(c1 + c2) > 0.5",
+        "0": "(c1 + c2)  == 0",
+        "2+": "(c1 + c2) > 1.5",
+        "3+": "(c1 + c2) > 2.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TO_WIN_EITHER_HALF": {
+      "common": {
+        "1": "c1 > c2 || c1_H1 > c2_H1",
+        "2": "c2 > c1 || c2_H1 > c1_H1",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    },
+    "DOUBLE_CHANCE_HALF/H:1": {
+      "common": {
+        "TIE_OR_$C2": "c1 <= c2",
+        "$C1_OR_TIE": "c1 >= c2",
+        "$C1_OR_$C2": "c1 != c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "EXACT_GOALS_HALF/H:1": {
+      "common": {
+        "1_GOAL": "(c1 + c2) == 1",
+        "NO_GOALS": "c1 + c2 == 0",
+        "2_GOAL": "(c1 + c2) == 2",
+        "3_GOALS_OR_MORE": "(c1 + c2) > 2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "EXACT_TEAM_GOALS_HALF/TEAM_TOTAL_NUMBER_OF_GOALS_-_1ST_HALF": {
+      "common": {
+        "1/0": "c1 == 0",
+        "1/1": "c1 == 1",
+        "1/2": "c1 == 2",
+        "1/3": "c1 == 3",
+        "1/4+": "c1 > 3",
+        "2/0": "c2 == 0",
+        "2/1": "c2 == 1",
+        "2/2": "c2 == 2",
+        "2/3": "c2 == 3",
+        "2/4+": "c2 > 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "TOTAL_GOALS_ODD/EVEN_HALF/H:1": {
+      "common": {
+        "EVEN": "!((c1 + c2) % 2)",
+        "ODD": "(c1 + c2) % 2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      }
+    },
+    "TOTAL_GOALS_ODD/EVEN_HALF/H:2": {
+      "common": {
+        "EVEN": "!((c1 + c2) % 2)",
+        "ODD": "(c1 + c2) % 2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "CORRECT_SCORE": {
+      "common": {
+        "0:0": "c1 == 0 && c2 == 0",
+        "0:1": "c1 == 0 && c2 == 1",
+        "0:2": "c1 == 0 && c2 == 2",
+        "0:3": "c1 == 0 && c2 == 3",
+        "0:4": "c1 == 0 && c2 == 4",
+        "0:5": "c1 == 0 && c2 == 5",
+
+        "1:0": "c1 == 1 && c2 == 0",
+        "1:1": "c1 == 1 && c2 == 1",
+        "1:2": "c1 == 1 && c2 == 2",
+        "1:3": "c1 == 1 && c2 == 3",
+        "1:4": "c1 == 1 && c2 == 4",
+        "1:5": "c1 == 1 && c2 == 5",
+        
+        "2:0": "c1 == 2 && c2 == 0",
+        "2:1": "c1 == 2 && c2 == 1",
+        "2:2": "c1 == 2 && c2 == 2",
+        "2:3": "c1 == 2 && c2 == 3",
+        "2:4": "c1 == 2 && c2 == 4",
+        "2:5": "c1 == 2 && c2 == 5",
+        
+        "3:0": "c1 == 3 && c2 == 0",
+        "3:1": "c1 == 3 && c2 == 1",
+        "3:2": "c1 == 3 && c2 == 2",
+        "3:3": "c1 == 3 && c2 == 3",
+        "3:4": "c1 == 3 && c2 == 4",
+        "3:5": "c1 == 3 && c2 == 5",
+        
+        "4:0": "c1 == 4 && c2 == 0",
+        "4:1": "c1 == 4 && c2 == 1",
+        "4:2": "c1 == 4 && c2 == 2",
+        "4:3": "c1 == 4 && c2 == 3",
+        "4:4": "c1 == 4 && c2 == 4",
+        "4:5": "c1 == 4 && c2 == 5",
+        
+        "5:0": "c1 == 5 && c2 == 0",
+        "5:1": "c1 == 5 && c2 == 1",
+        "5:2": "c1 == 5 && c2 == 2",
+        "5:3": "c1 == 5 && c2 == 3",
+        "5:4": "c1 == 5 && c2 == 4",
+        "5:5": "c1 == 5 && c2 == 5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      }
+    }
+  }
+}
