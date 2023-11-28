@@ -114,11 +114,11 @@ setTimeout(() => {
     const detailData = getDetailData(feedId);
     const eventData = getEventData(feedId);
     const market_rules = marketRulesData;
-    const cCode = getCCode(feedId, feedEvent);
+    const cCode = getCCode(feedId, feedEvent);  // ex: "ML"
     const homeName = eventData?.d?.c1?.n.toUpperCase();
     const awayName = eventData?.d?.c2?.n.toUpperCase();
-    const pCode = market_rules[row.sport]?.[cCode]?.FULL?.p ?? "";
-    const path = market_rules[row.sport]?.[cCode]?.FULL?.path ?? "";
+    const pCode = market_rules[row.sport]?.[cCode]?.FULL?.p ?? "";  // ex: "p.i > 249 && p.i < 256"
+    const path = market_rules[row.sport]?.[cCode]?.FULL?.path ?? "";  // ex: "ps.CS.score"
     const c1 = getValueByPath(eventData?.d, path)?.c1;
     const c2 = getValueByPath(eventData?.d, path)?.c2;
     const a = eventData?.d?.m[feedEvent]?.o?.[feedSelection]?.a?.[0];
@@ -126,7 +126,7 @@ setTimeout(() => {
     const commonCode = eventData?.d?.m[feedEvent]?.o?.[feedSelection]?.c
       .replace("$C1", homeName)
       .replace("$C2", awayName);
-    const checkValue = market_rules[row.sport]?.[cCode]?.common?.[commonCode] ?? "";
+    const checkValue = market_rules[row.sport]?.[cCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
     if (checkValue && eval(pCode)) {
       if (eval(checkValue)) console.log(cCode, checkValue, "Bet Win!");
       else console.log(cCode, checkValue, "Bet Lose!");

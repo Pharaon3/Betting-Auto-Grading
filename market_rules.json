@@ -21,19 +21,6 @@
         "p": "p.n != \"1st Half\" && cl.m > 45",
         "path": "ps.1.score"
       }
-    },
-    "TOTAL_GOALS_REGULAR_TIME": {
-      "common": {
-        "O": "(c1 + c2) > a",
-        "U": "(c1 + c2) < a",
-        "isDetailFlip": false
-      },
-      "FULL": {
-        "isDetail": false,
-        "source": null,
-        "p": "p.i > 249 && p.i < 256",
-        "path": "ps.CS.score"
-      }
     }
   }
 }
