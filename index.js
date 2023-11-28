@@ -58,28 +58,18 @@ axios
   .catch((error) => {
     console.log(error);
   });
-// Get the current directory
 const currentDirectory = process.cwd();
-
-// Specify the file names
 const fileNames = [
   "market_rules.json",
   "footballEventData.json",
   "footballDetail.json",
 ];
-
-// Variables to store the data
 let marketRulesData, footballEventData, footballDetailData;
-
-// Read each specified JSON file
 fileNames.forEach((fileName) => {
   const filePath = path.join(currentDirectory, fileName);
 
   try {
-    // Read the file synchronously to simplify the example
     const data = fs.readFileSync(filePath, "utf8");
-
-    // Parse the JSON data and store in the corresponding variable
     if (fileName === "market_rules.json") {
       marketRulesData = JSON.parse(data);
     } else if (fileName === "footballEventData.json") {
@@ -100,7 +90,7 @@ const getEventData = (feedId) => {
 const getCCode = (feedId, feedEvent) => {
   return getEventData(feedId)?.d?.m[feedEvent]?.c;
 };
-function getValueByPath(data, path) {
+const getValueByPath = (data, path) => {
   const keys = path.split(".");
   let value = data;
 
@@ -138,8 +128,8 @@ setTimeout(() => {
       .replace("$C2", awayName);
     const checkValue = market_rules[row.sport]?.[cCode]?.common?.[commonCode] ?? "";
     if (checkValue && eval(pCode)) {
-      if (eval(checkValue)) console.log(checkValue, "Bet Win!");
-      else console.log(checkValue, "Bet Lose!");
+      if (eval(checkValue)) console.log(cCode, checkValue, "Bet Win!");
+      else console.log(cCode, checkValue, "Bet Lose!");
     } else {
       console.log("Cannot grade.", cCode, checkValue);
     }
