@@ -18,7 +18,7 @@
         "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
         "check": "type = periodscore && name == \"1st half\"",
         "scores": "c1 = periodscore.home, c2 = periodscore.away",
-        "p": "p.n != \"1st Half\" && cl.m > 45",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
         "path": "ps.1.score"
       }
     }
