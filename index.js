@@ -70,7 +70,6 @@ fs.readFile('response.xml', 'utf-8', (err, data) => {
       return;
     }
     const xmlData = result;
-    console.log(xmlData);
     const text = xmlData?.anyType?._;
     const resArray = text.split("^");
 
@@ -129,7 +128,7 @@ fileNames.forEach((fileName) => {
     console.error(`Error reading or parsing ${fileName}:`, readError);
   }
 });
-const getDetailData = (feedId) => {
+const getDetailData = (course) => {
   return footballDetailData;
 }
 const getEventData = (feedId) => {
@@ -152,7 +151,7 @@ const getValueByPath = (data, path) => {
   return value;
 }
 setTimeout(() => {
-  console.log("wagerData:", wagerData);
+  // console.log("wagerData:", wagerData);
   // console.log("marketRulesData:", marketRulesData);
   // console.log("footballEventData:", footballEventData);
   // console.log("footballDetailData:", footballDetailData);
@@ -166,56 +165,87 @@ setTimeout(() => {
       const eventData = getEventData(feedId);
       let marketCode = getMarketCode(eventData, feedMarket);  // ex: "ML/H:2"
       let period = "";
+      let isDetail = false;
+      let source = "";
       if(row.sport == "Soccer") {
         period = "FULL";
         if(marketCode && marketCode.includes("/H")) {
           period = "H" + marketCode.split("/H:")[1];
         }
         marketCode = marketCode?.split("/H:")[0];
+        isDetail = market_rules?.[row.sport][marketCode]?.[period]?.isDetail;
+        source = market_rules?.[row.sport][marketCode]?.[period]?.source?.replace("EVENT_ID", feedId);
+        check = market_rules?.[row.sport][marketCode]?.[period]?.check;
+        reverse = market_rules?.[row.sport][marketCode]?.[period]?.reverse;
       } else if (row.sport == "Basketball") {
         period = "FULL";
         if(marketCode && marketCode.includes("/Q")) {
           period = "Q" + marketCode.split("/Q:")[1];
         }
         marketCode = marketCode?.split("/Q:")[0];
+        isDetail = market_rules?.[row.sport][marketCode]?.period?.isDetail;
+        source = market_rules?.[row.sport][marketCode]?.[period]?.source.replace("EVENT_ID", feedId);
+        check = market_rules?.[row.sport][marketCode]?.[period]?.check;
       }
       if(market_rules[row.sport]?.[marketCode]){
-        console.log("period: ", period);
+        // console.log("period: ", period);
         const market = market_rules[row.sport]?.[marketCode];
         if(period){
           const homeName = eventData?.d?.c1?.n;
           const awayName = eventData?.d?.c2?.n;
           const pCode = market_rules[row.sport]?.[marketCode]?.[period]?.p ?? "";  // ex: "p.i > 249 && p.i < 256"
           const path = market_rules[row.sport]?.[marketCode]?.[period]?.path ?? "";  // ex: "ps.CS.score"
-          const c1 = getValueByPath(eventData?.d, path)?.c1;
-          const c2 = getValueByPath(eventData?.d, path)?.c2;
+          let c1, c2;
+          if(isDetail){
+            const detailData = getDetailData(source);
+            for(let i = 0; i < detailData?.d?.events?.length; i ++){
+              let currentEvent = detailData?.d?.events[i];
+              let type = currentEvent?.type,
+                  name = currentEvent?.name,
+                  periodscore = currentEvent?.periodscore;
+              if(eval(check)) {
+                eval(market_rules?.[row.sport][marketCode]?.[period]?.scores);
+              }
+            }
+            if(reverse){
+              let tempC1 = c1;
+              c1 = c2;
+              c2 = tempC1;
+            } else {
+            }
+          } else {
+            c1 = getValueByPath(eventData?.d, path)?.c1;
+            c2 = getValueByPath(eventData?.d, path)?.c2;
+          }
           const a = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.a?.[0];
-          const p = eventData?.d?.p;
-          const cl = eventData?.d?.cl;
+          const p = eventData?.d?.p;  // "p": { "i": 255, "c": "", "n": "END"}
+          const cl = eventData?.d?.cl;  // "cl": { "m": 90, "s": 29, "r": 0 }
           const commonCode = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.c
             .replace("$C1", homeName.toUpperCase())
             .replace("$C2", awayName.toUpperCase());  // ex: 1
           const checkValue = market_rules[row.sport]?.[marketCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
           if (checkValue && eval(pCode)) {
+            console.log();
+            console.log("C1, C2, A: ", c1, c2, a);
             if (eval(checkValue)) console.log(marketCode, checkValue, "Bet Win!");
             else console.log(marketCode, checkValue, "Bet Lose!");
           } else {
-            console.log("Cannot grade.", marketCode, checkValue);
+            // console.log("Cannot grade.", marketCode, checkValue);
             unGradedWagers.push(row);
           }
         } else {
-          console.log("This wager cannot be grade for now.");
+          // console.log("This wager cannot be grade for now.");
           unGradedWagers.push(row);
         }
       } else if (1) {
-        console.log("something happend");
+        // console.log("something happend");
       } else {
-        console.log(row.sport + " in market rules doesn't have " + marketCode);
+        // console.log(row.sport + " in market rules doesn't have " + marketCode);
         unGradedWagers.push(row);
       }
       
     } else {
-      console.log("Market Rule doesn't have " + row.sport);
+      // console.log("Market Rule doesn't have " + row.sport);
       unGradedWagers.push(row);
     }
   });

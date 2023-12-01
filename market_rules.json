@@ -16,10 +16,17 @@
       "H1": {
         "isDetail": true,
         "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
-        "check": "type = periodscore && name == \"1st half\"",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
         "scores": "c1 = periodscore.home, c2 = periodscore.away",
         "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
         "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
       }
     }
   }
