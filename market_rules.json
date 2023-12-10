@@ -28,6 +28,151 @@
         "p": "p.i > 249 && p.i < 256",
         "path": "ps.2.score"
       }
+    },
+    "TOTAL_GOALS_REGULAR_TIME": {
+      "common": {
+        "O": "(c1 + c2) > a",
+        "U": "(c1 + c2) < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "BOTH_TEAMS_TO_SCORE": {
+      "common": {
+        "Y": "c1 > 0 && c2 > 0",
+        "N": "c1 == 0 || c2 == 0",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_GOALS_OE": {
+      "common": {
+        "E": "!((c1 + c2) % 2)",
+        "O": "((c1 + c2) % 2)",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "DOUBLE_CHANCE": {
+      "common": {
+        "TIE_OR_$C1": "c1 == c2 || c1 > c1",
+        "$C1_OR_$C2": "c1 > c2 || c1 < c2",
+        "$C2_OR_TIE": "c2 > c1 || c2 == c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "MONEYLINE": {
+      "common": {
+        "$C1_WIN_AND_OVER": "c1 > c2 && (c1 + c2) > compareScore",
+        "$C1_WIN_AND_UNDER": "c1 > c2 && (c1 + c2) < compareScore",
+        "TIE_AND_OVER": "c1 == c2 && (c1 + c2) > compareScore",
+        "TIE_AND_UNDER": "c1 == c2 && (c1 + c2) < compareScore",
+        "$C2_WIN_AND_OVER": "c2 > c1 && (c1 + c2) > compareScore",
+        "$C2_WIN_AND_UNDER": "c2 > c1 && (c1 + c2) < compareScore",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
     }
   }
 }

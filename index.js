@@ -167,16 +167,22 @@ setTimeout(() => {
       let period = "";
       let isDetail = false;
       let source = "";
+      let compareScore = 0;
       if(row.sport == "Soccer") {
         period = "FULL";
         if(marketCode && marketCode.includes("/H")) {
           period = "H" + marketCode.split("/H:")[1];
         }
         marketCode = marketCode?.split("/H:")[0];
+        if(marketCode && marketCode.includes("/TOTAL")) {
+          compareScore = parseFloat(marketCode.split("/TOTAL:")[1]);
+        }
+        marketCode = marketCode?.split("/TOTAL:")[0];
         isDetail = market_rules?.[row.sport][marketCode]?.[period]?.isDetail;
         source = market_rules?.[row.sport][marketCode]?.[period]?.source?.replace("EVENT_ID", feedId);
         check = market_rules?.[row.sport][marketCode]?.[period]?.check;
         reverse = market_rules?.[row.sport][marketCode]?.[period]?.reverse;
+
       } else if (row.sport == "Basketball") {
         period = "FULL";
         if(marketCode && marketCode.includes("/Q")) {
@@ -220,13 +226,16 @@ setTimeout(() => {
           const a = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.a?.[0];
           const p = eventData?.d?.p;  // "p": { "i": 255, "c": "", "n": "END"}
           const cl = eventData?.d?.cl;  // "cl": { "m": 90, "s": 29, "r": 0 }
-          const commonCode = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.c
-            .replace("$C1", homeName.toUpperCase())
-            .replace("$C2", awayName.toUpperCase());  // ex: 1
+          let commonCode = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.c  // ex: EVEN, 1, O, U, Y, N, 
+            .replace(homeName.toUpperCase(), "$C1")
+            .replace(awayName.toUpperCase(), "$C2");  // ex: 1
+          if(compareScore) {
+            commonCode = commonCode.replace("_" + compareScore, "");
+          }
           const checkValue = market_rules[row.sport]?.[marketCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
           if (checkValue && eval(pCode)) {
             console.log();
-            console.log("C1, C2, A: ", c1, c2, a);
+            console.log("C1, C2, A, compareScore : ", c1, c2, a, compareScore);
             if (eval(checkValue)) console.log(marketCode, checkValue, "Bet Win!");
             else console.log(marketCode, checkValue, "Bet Lose!");
           } else {
