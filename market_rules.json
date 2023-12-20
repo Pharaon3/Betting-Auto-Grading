@@ -142,7 +142,7 @@
         "path": "ps.2.score"
       }
     },
-    "MONEYLINE": {
+    "MONEYLINE/TOTAL": {
       "common": {
         "$C1_WIN_AND_OVER": "c1 > c2 && (c1 + c2) > compareScore",
         "$C1_WIN_AND_UNDER": "c1 > c2 && (c1 + c2) < compareScore",
@@ -162,6 +162,475 @@
         "isDetail": true,
         "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
         "check": "type == \"periodscore\" && name == \"1st half\"",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_TEAM_GOALS/C": {
+      "common": {
+        "O": "c0 > a",
+        "U": "c0 < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "EXACT_TEAM_TOTAL_GOALS": {
+      "common": {
+        "1/0": "c1 == 0",
+        "1/1": "c1 == 1",
+        "1/2": "c1 == 2",
+        "1/3": "c1 == 3",
+        "1/4+": "c1 > 3",
+        "2/0": "c2 == 0",
+        "2/1": "c2 == 1",
+        "2/2": "c2 == 2",
+        "2/3": "c2 == 3",
+        "2/4+": "c2 > 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TEAM_TOTALS_OE": {
+      "common": {
+        "1/E": "!(c1 % 2)",
+        "2/E": "!(c2 % 2)",
+        "1/O": "(c1 % 2)",
+        "2/O": "(c2 % 2)",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "MONEYLINE_HALF_3W": {
+      "common": {
+        "1": "c1 > c2",
+        "X": "c1 == c2",
+        "2": "c1 < c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_OU": {
+      "common": {
+        "O": "(c1 + c2) > a",
+        "U": "(c1 + c2) < a",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "CORRECT_SCORE_HALF": {
+      "common": {
+        "1:0": "c1 == 1 && c2 == 0",
+        "2:0": "c1 == 2 && c2 == 0",
+        "2:1": "c1 == 2 && c2 == 1",
+        "3:0": "c1 == 3 && c2 == 0",
+        "3:1": "c1 == 3 && c2 == 1",
+        "0:0": "c1 == 0 && c2 == 0",
+        "1:1": "c1 == 1 && c2 == 1",
+        "2:2": "c1 == 2 && c2 == 2",
+        "0:1": "c1 == 0 && c2 == 1",
+        "0:2": "c1 == 0 && c2 == 2",
+        "1:2": "c1 == 1 && c2 == 2",
+        "0:3": "c1 == 0 && c2 == 3",
+        "1:3": "c1 == 1 && c2 == 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TEAM_TO_SCORE_HALF": {
+      "common": {
+        "1/Y": "c1 > 0",
+        "2/Y": "c2 > 0",
+        "1/N": "c1 == 0",
+        "2/N": "c2 == 0",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_GOALS_BANDS_HALF": {
+      "common": {
+        "0-1": "(c1 + c2) < 1.5",
+        "1+": "(c1 + c2) > 0.5",
+        "0": "(c1 + c2)  == 0",
+        "2+": "(c1 + c2) > 1.5",
+        "3+": "(c1 + c2) > 2.5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TO_WIN_EITHER_HALF": {
+      "common": {
+        "1": "c1 > c2 || c1_H1 > c2_H1",
+        "2": "c2 > c1 || c2_H1 > c1_H1",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "DOUBLE_CHANCE_HALF": {
+      "common": {
+        "TIE_OR_$C2": "c1 <= c2",
+        "$C1_OR_TIE": "c1 >= c2",
+        "$C1_OR_$C2": "c1 != c2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "EXACT_GOALS_HALF": {
+      "common": {
+        "1_GOAL": "(c1 + c2) == 1",
+        "NO_GOALS": "c1 + c2 == 0",
+        "2_GOAL": "(c1 + c2) == 2",
+        "3_GOALS_OR_MORE": "(c1 + c2) > 2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "EXACT_TEAM_GOALS_HALF/TEAM_TOTAL_NUMBER_OF_GOALS_-_1ST_HALF": {
+      "common": {
+        "1/0": "c1 == 0",
+        "1/1": "c1 == 1",
+        "1/2": "c1 == 2",
+        "1/3": "c1 == 3",
+        "1/4+": "c1 > 3",
+        "2/0": "c2 == 0",
+        "2/1": "c2 == 1",
+        "2/2": "c2 == 2",
+        "2/3": "c2 == 3",
+        "2/4+": "c2 > 3",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.1.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "TOTAL_GOALS_ODD/EVEN_HALF": {
+      "common": {
+        "EVEN": "!((c1 + c2) % 2)",
+        "ODD": "(c1 + c2) % 2",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
+        "reverse": false,
+        "scores": "c1 = periodscore.home, c2 = periodscore.away",
+        "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",
+        "path": "ps.1.score"
+      },
+      "H2": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.2.score"
+      }
+    },
+    "CORRECT_SCORE": {
+      "common": {
+        "0:0": "c1 == 0 && c2 == 0",
+        "0:1": "c1 == 0 && c2 == 1",
+        "0:2": "c1 == 0 && c2 == 2",
+        "0:3": "c1 == 0 && c2 == 3",
+        "0:4": "c1 == 0 && c2 == 4",
+        "0:5": "c1 == 0 && c2 == 5",
+
+        "1:0": "c1 == 1 && c2 == 0",
+        "1:1": "c1 == 1 && c2 == 1",
+        "1:2": "c1 == 1 && c2 == 2",
+        "1:3": "c1 == 1 && c2 == 3",
+        "1:4": "c1 == 1 && c2 == 4",
+        "1:5": "c1 == 1 && c2 == 5",
+        
+        "2:0": "c1 == 2 && c2 == 0",
+        "2:1": "c1 == 2 && c2 == 1",
+        "2:2": "c1 == 2 && c2 == 2",
+        "2:3": "c1 == 2 && c2 == 3",
+        "2:4": "c1 == 2 && c2 == 4",
+        "2:5": "c1 == 2 && c2 == 5",
+        
+        "3:0": "c1 == 3 && c2 == 0",
+        "3:1": "c1 == 3 && c2 == 1",
+        "3:2": "c1 == 3 && c2 == 2",
+        "3:3": "c1 == 3 && c2 == 3",
+        "3:4": "c1 == 3 && c2 == 4",
+        "3:5": "c1 == 3 && c2 == 5",
+        
+        "4:0": "c1 == 4 && c2 == 0",
+        "4:1": "c1 == 4 && c2 == 1",
+        "4:2": "c1 == 4 && c2 == 2",
+        "4:3": "c1 == 4 && c2 == 3",
+        "4:4": "c1 == 4 && c2 == 4",
+        "4:5": "c1 == 4 && c2 == 5",
+        
+        "5:0": "c1 == 5 && c2 == 0",
+        "5:1": "c1 == 5 && c2 == 1",
+        "5:2": "c1 == 5 && c2 == 2",
+        "5:3": "c1 == 5 && c2 == 3",
+        "5:4": "c1 == 5 && c2 == 4",
+        "5:5": "c1 == 5 && c2 == 5",
+        "isDetailFlip": false
+      },
+      "FULL": {
+        "isDetail": false,
+        "source": null,
+        "p": "p.i > 249 && p.i < 256",
+        "path": "ps.CS.score"
+      },
+      "H1": {
+        "isDetail": true,
+        "source": "http://62.112.8.78:9595/events/EVENT_ID/detailed-scores",
+        "check": "type == \"periodscore\" && name == \"1st half\" && injurytime",
         "reverse": false,
         "scores": "c1 = periodscore.home, c2 = periodscore.away",
         "p": "(p.n != \"1st Half\" && cl.m > 45) || (p.i > 249 && p.i < 256)",

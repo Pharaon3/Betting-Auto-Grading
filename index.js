@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { DOMParser } = require("xmldom");
 const xml2js = require('xml2js');
+const stringSimilarity = require("string-similarity");
 
 let wagerData = [];
 let market_rules = [];
@@ -168,6 +169,8 @@ setTimeout(() => {
       let isDetail = false;
       let source = "";
       let compareScore = 0;
+      let c0_number;
+      let reverse = false;
       if(row.sport == "Soccer") {
         period = "FULL";
         if(marketCode && marketCode.includes("/H")) {
@@ -176,13 +179,16 @@ setTimeout(() => {
         marketCode = marketCode?.split("/H:")[0];
         if(marketCode && marketCode.includes("/TOTAL")) {
           compareScore = parseFloat(marketCode.split("/TOTAL:")[1]);
+          marketCode = marketCode?.split("/TOTAL:")[0] + "/TOTAL";
         }
-        marketCode = marketCode?.split("/TOTAL:")[0];
+        if(marketCode && marketCode.includes("/C:")) {
+          c0_number = parseFloat(marketCode.split("/C:")[1]);
+          marketCode = marketCode?.split("/C:")[0] + "/C";
+        }
         isDetail = market_rules?.[row.sport][marketCode]?.[period]?.isDetail;
         source = market_rules?.[row.sport][marketCode]?.[period]?.source?.replace("EVENT_ID", feedId);
         check = market_rules?.[row.sport][marketCode]?.[period]?.check;
         reverse = market_rules?.[row.sport][marketCode]?.[period]?.reverse;
-
       } else if (row.sport == "Basketball") {
         period = "FULL";
         if(marketCode && marketCode.includes("/Q")) {
@@ -201,9 +207,32 @@ setTimeout(() => {
           const awayName = eventData?.d?.c2?.n;
           const pCode = market_rules[row.sport]?.[marketCode]?.[period]?.p ?? "";  // ex: "p.i > 249 && p.i < 256"
           const path = market_rules[row.sport]?.[marketCode]?.[period]?.path ?? "";  // ex: "ps.CS.score"
-          let c1, c2;
+          let c1, c2, c0;
+          
+          const detailData = getDetailData(source);
+          const homeNameFromDetail = detailData?.d?.match?.teams?.home?.name;
+          const awayNameFromDetail = detailData?.d?.match?.teams?.away?.name;
+          // console.log("Home, Away Name from Event Data: ", homeName, awayName);
+          // console.log("Home, Away Name from Detail Data: ", homeNameFromDetail, awayNameFromDetail);
+          var matchesHome = stringSimilarity.findBestMatch(homeName, [
+            homeNameFromDetail,
+            awayNameFromDetail,
+          ]);
+          var matchesAway = stringSimilarity.findBestMatch(awayName, [
+            homeNameFromDetail,
+            awayNameFromDetail,
+          ]);
+          // console.log("matchesHome: ", matchesHome);
+          // console.log("matchesAway: ", matchesAway);
+          let isReverseFalse = matchesHome.ratings[0].rating + matchesAway.ratings[1].rating;
+          let isReverseTrue = matchesHome.ratings[1].rating + matchesAway.ratings[0].rating;
+          if(isReverseTrue > isReverseFalse) reverse = true;
+          else reverse = false;
+          console.log("reverse: ", reverse);
+          // console.log("isReverseTrue: ", isReverseTrue);
+          // console.log("isReverseFalse: ", isReverseFalse);
+          // console.log("reverse: ", reverse);
           if(isDetail){
-            const detailData = getDetailData(source);
             for(let i = 0; i < detailData?.d?.events?.length; i ++){
               let currentEvent = detailData?.d?.events[i];
               let type = currentEvent?.type,
@@ -222,6 +251,17 @@ setTimeout(() => {
           } else {
             c1 = getValueByPath(eventData?.d, path)?.c1;
             c2 = getValueByPath(eventData?.d, path)?.c2;
+            if(reverse){
+              let tempC1 = c1;
+              c1 = c2;
+              c2 = tempC1;
+            } else {
+            }
+          }
+          if(c0_number == 1) {
+            c0 = c1;
+          } else if (c0_number == 2) {
+            c0 = c2;
           }
           const a = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.a?.[0];
           const p = eventData?.d?.p;  // "p": { "i": 255, "c": "", "n": "END"}
@@ -235,7 +275,7 @@ setTimeout(() => {
           const checkValue = market_rules[row.sport]?.[marketCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
           if (checkValue && eval(pCode)) {
             console.log();
-            console.log("C1, C2, A, compareScore : ", c1, c2, a, compareScore);
+            console.log("C0, C1, C2, A, compareScore : ", c0, c1, c2, a, compareScore);
             if (eval(checkValue)) console.log(marketCode, checkValue, "Bet Win!");
             else console.log(marketCode, checkValue, "Bet Lose!");
           } else {
