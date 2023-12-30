@@ -151,6 +151,38 @@ const getValueByPath = (data, path) => {
   }
   return value;
 }
+const getCountByType = (counttype, detailData) => {
+  let count = 0;
+  for(let i = 0; i < detailData?.d?.events?.length; i ++){
+    let currentEvent = detailData?.d?.events[i];
+    let type = currentEvent?.type
+    if(type == counttype)
+      count += 1
+  }
+  return count;
+}
+const getFirstByType = (firsttype, detailData) => {
+  for(let i = 0; i < detailData?.d?.events?.length; i ++){
+    let currentEvent = detailData?.d?.events[i];
+    let type = currentEvent?.type
+    if(type == firsttype){
+      return currentEvent
+    }
+  }
+  return None;
+}
+
+const getEndByType = (firsttype, detailData) => {
+  for(let i =  detailData?.d?.events?.length-1; i >= 0; i--){
+    let currentEvent = detailData?.d?.events[i];
+    let type = currentEvent?.type
+    if(type == firsttype){
+      return currentEvent
+    }
+  }
+  return None;
+}
+
 setTimeout(() => {
   // console.log("wagerData:", wagerData);
   // console.log("marketRulesData:", marketRulesData);
@@ -207,7 +239,7 @@ setTimeout(() => {
           const awayName = eventData?.d?.c2?.n;
           const pCode = market_rules[row.sport]?.[marketCode]?.[period]?.p ?? "";  // ex: "p.i > 249 && p.i < 256"
           const path = market_rules[row.sport]?.[marketCode]?.[period]?.path ?? "";  // ex: "ps.CS.score"
-          let c1, c2, c0;
+          let c1, c2, c0, periodc1, periodc2, firstteam, lastteam, count;
           
           const detailData = getDetailData(source);
           const homeNameFromDetail = detailData?.d?.match?.teams?.home?.name;
@@ -233,6 +265,27 @@ setTimeout(() => {
           // console.log("isReverseFalse: ", isReverseFalse);
           // console.log("reverse: ", reverse);
           if(isDetail){
+            count = 0;
+            let countType = market_rules?.[row.sport][marketCode]?.[period]?.counttype
+            let firstType = market_rules?.[row.sport][marketCode]?.[period]?.firsttype
+            let endType = market_rules?.[row.sport][marketCode]?.[period]?.endtype
+            if(countType){
+              count = getCountByType(countType, detailData)
+            }
+            if(firstType){
+              let firstElement = getFirstByType(firstType, detailData)
+              if(firstElement){
+                firstteam = firstElement.team
+              }
+              else firstteam = "No Goal"
+            }
+            if(endType){
+              let endElement = getEndByType(endType, detailData)
+              if(endElement){
+                lastteam = endElement.team
+              }
+              else lastteam = "No Goal"
+            }
             for(let i = 0; i < detailData?.d?.events?.length; i ++){
               let currentEvent = detailData?.d?.events[i];
               let type = currentEvent?.type,
@@ -251,6 +304,9 @@ setTimeout(() => {
           } else {
             c1 = getValueByPath(eventData?.d, path)?.c1;
             c2 = getValueByPath(eventData?.d, path)?.c2;
+            let scoreWhen = row.scorewhen.split("-")
+            periodc1 = parseInt(scoreWhen[0])
+            periodc2 = parseInt(scoreWhen[1])
             if(reverse){
               let tempC1 = c1;
               c1 = c2;
@@ -275,7 +331,7 @@ setTimeout(() => {
           const checkValue = market_rules[row.sport]?.[marketCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
           if (checkValue && eval(pCode)) {
             console.log();
-            console.log("C0, C1, C2, A, compareScore : ", c0, c1, c2, a, compareScore);
+            console.log("C0, C1, C2, A, compareScore, periodC1, periodC2, count, team : ", c0, c1, c2, a, compareScore, periodc1, periodc2, count, team);
             if (eval(checkValue)) console.log(marketCode, checkValue, "Bet Win!");
             else console.log(marketCode, checkValue, "Bet Lose!");
           } else {
