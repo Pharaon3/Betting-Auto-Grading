@@ -215,7 +215,11 @@ setTimeout(() => {
         }
         if(marketCode && marketCode.includes("/C:")) {
           c0_number = parseFloat(marketCode.split("/C:")[1]);
-          marketCode = marketCode?.split("/C:")[0] + "/C";
+          marketCode = marketCode?.split("/C:")[0];
+        }
+        if(marketCode && marketCode.includes("_EXTRA_TIME")){
+          marketCode = marketCode?.split("_EXTRA_TIME")[0];
+          period = "ET"
         }
         isDetail = market_rules?.[row.sport][marketCode]?.[period]?.isDetail;
         source = market_rules?.[row.sport][marketCode]?.[period]?.source?.replace("EVENT_ID", feedId);
@@ -241,7 +245,20 @@ setTimeout(() => {
           const path = market_rules[row.sport]?.[marketCode]?.[period]?.path ?? "";  // ex: "ps.CS.score"
           let c1, c2, c0, periodc1, periodc2, firstteam, lastteam, count;
           
-          const detailData = getDetailData(source);
+          let detailData = "";
+          detailData = getDetailData(source);
+          let getDetailData_count = 5;
+          while(getDetailData_count){
+            if(detailData)
+              break
+            else{
+              setTimeout(() => {
+                detailData = getDetailData(source)
+              }, 500)
+            }
+            getDetailData_count--;
+          }
+          
           const homeNameFromDetail = detailData?.d?.match?.teams?.home?.name;
           const awayNameFromDetail = detailData?.d?.match?.teams?.away?.name;
           // console.log("Home, Away Name from Event Data: ", homeName, awayName);
@@ -304,6 +321,8 @@ setTimeout(() => {
           } else {
             c1 = getValueByPath(eventData?.d, path)?.c1;
             c2 = getValueByPath(eventData?.d, path)?.c2;
+            c1_H1 = getValueByPath(eventData?.d, "ps.1.score")?.c1;
+            c2_H1 = getValueByPath(eventData?.d, "ps.1.score")?.c2;
             let scoreWhen = row.scorewhen.split("-")
             periodc1 = parseInt(scoreWhen[0])
             periodc2 = parseInt(scoreWhen[1])
@@ -311,6 +330,9 @@ setTimeout(() => {
               let tempC1 = c1;
               c1 = c2;
               c2 = tempC1;
+              let tempC1H1 = c1_H1;
+              c1_H1 = c2_H1;
+              c2_H1 = tempC1H1;
             } else {
             }
           }
@@ -322,16 +344,18 @@ setTimeout(() => {
           const a = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.a?.[0];
           const p = eventData?.d?.p;  // "p": { "i": 255, "c": "", "n": "END"}
           const cl = eventData?.d?.cl;  // "cl": { "m": 90, "s": 29, "r": 0 }
+          let homeNameRegex = new RegExp(homeName.toUpperCase(), "gi");
+          let awaynameRegex = new RegExp(awayName.toUpperCase(), "gi");
           let commonCode = eventData?.d?.m[feedMarket]?.o?.[feedMarketOption]?.c  // ex: EVEN, 1, O, U, Y, N, 
-            .replace(homeName.toUpperCase(), "$C1")
-            .replace(awayName.toUpperCase(), "$C2");  // ex: 1
+            .replace(homeNameRegex, "$C1")
+            .replace(awaynameRegex, "$C2");  // ex: 1
           if(compareScore) {
             commonCode = commonCode.replace("_" + compareScore, "");
           }
           const checkValue = market_rules[row.sport]?.[marketCode]?.common?.[commonCode] ?? "";  // ex: "c1 > c2"
           if (checkValue && eval(pCode)) {
             console.log();
-            console.log("C0, C1, C2, A, compareScore, periodC1, periodC2, count, team : ", c0, c1, c2, a, compareScore, periodc1, periodc2, count, team);
+            console.log("C0, C1, C2, A, compareScore, periodC1, periodC2, count, firstteam, lastteam, C1_H1, C2_H1: ", c0, c1, c2, a, compareScore, periodc1, periodc2, count, firstteam, lastteam, c1_H1, c2_H1);
             if (eval(checkValue)) console.log(marketCode, checkValue, "Bet Win!");
             else console.log(marketCode, checkValue, "Bet Lose!");
           } else {
